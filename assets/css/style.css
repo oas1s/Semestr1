@@ -31,18 +31,10 @@
     justify-content: flex-end;
 }
 
-body {
+body, html{
     background-image: url("https://images.pexels.com/photos/1166644/pexels-photo-1166644.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    height: 50%;
+    height: 100%;
     background-position: center;
-    background-size: cover;
-}
-
-.bg {
-    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -63,4 +55,12 @@ body {
 }
 .custom-control-input:focus ~ .custom-control-label::before {
     box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.28);
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #fdc330;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(253, 195, 48, 0.25);
 }
