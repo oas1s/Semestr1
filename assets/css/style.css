@@ -64,3 +64,6 @@ body, html{
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(253, 195, 48, 0.25);
 }
+.bg-footer {
+    background-color: #1c1c1c !important;
+}

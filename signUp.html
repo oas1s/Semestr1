@@ -19,123 +19,113 @@
         <ul class="navbar-nav flex-row ml-md-auto">
             <form class="form-inline row">
                 <li class="nav-item">
-                    <button class="btn btn-outline-warning mr-3" type="button">Создать проект</button>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link navbar-toggler-icon" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right my-dropdown" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Профиль</a>
-                        <a class="dropdown-item" href="#">Проекты</a>
-                        <a class="dropdown-item" href="#">Задания</a>
-                        <a class="dropdown-item" href="#">Чаты</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Выход</a>
-                    </div>
+                    <button class="btn btn-outline-warning mr-3" type="button">Войти</button>
                 </li>
             </form>
         </ul>
     </div>
 
 </nav> <!--navbar-->
+
 <div class="container-fluid">
-    <div class="col-6 ml-auto" style="margin-top: 20px">
-        <form class="form">
-            <div class="form-row">
+    <div class="row">
+        <div class="col-5 ml-auto" style="margin-top: 100px;">
+            <h3>Зарегистрируйтесь, чтобы начать эффективную работу над проектами!</h3>
+        </div>
+        <div class="col-6 ml-auto" style="margin-top: 20px; margin-bottom: 20px;">
+            <form class="form">
+                <div class="form-row">
+                    <div class="row" style="font-weight: bold;">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="Name">Имя</label>
+                                <input type="text" class="form-control" id="Name" placeholder="Имя" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="Surname">Фамилия</label>
+                                <input type="text" class="form-control" id="Surname" placeholder="Фамилия" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="Lastname">Отчество</label>
+                                <input type="text" class="form-control" id="Lastname" placeholder="Отчество"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="University">Институт</label>
+                                <input type="text" class="form-control" id="University" placeholder="Институт" required>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--ФИО, институт-->
+
+                <div class="row" style="font-weight: bold;">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="Course">Курс</label>
+                            <input type="text" class="form-control" id="Course" placeholder="Курс" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Group">Группа</label>
+                            <input type="text" class="form-control" id="Group" placeholder="Группа" required>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label for="Addition">Дополнительные сведения</label>
+                            <textarea style="height: 124px;" type="text" class="form-control" id="Addition"
+                                      placeholder="Дополнительная информация о себе"></textarea>
+                        </div>
+                    </div>
+                </div> <!--курс, институт, доп-->
+
                 <div class="row" style="font-weight: bold;">
                     <div class="col-6">
                         <div class="form-group">
-                            <label for="Name">Имя</label>
-                            <input type="text" class="form-control" id="Name" placeholder="Имя" required>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group">
-                            <label for="Surname">Фамилия</label>
-                            <input type="text" class="form-control" id="Surname" placeholder="Фамилия" required>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group">
-                            <label for="Lastname">Отчество</label>
-                            <input type="text" class="form-control" id="Lastname" placeholder="Отчество"
-                                   required>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group">
-                            <label for="University">Институт</label>
-                            <input type="text" class="form-control" id="University" placeholder="Институт" required>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--ФИО, институт-->
-
-            <div class="row" style="font-weight: bold;">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="Course">Курс</label>
-                        <input type="text" class="form-control" id="Course" placeholder="Курс" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="Group">Группа</label>
-                        <input type="text" class="form-control" id="Group" placeholder="Группа" required>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="form-group">
-                        <label for="Addition">Дополнительные сведения</label>
-                        <textarea style="height: 124px;" type="text" class="form-control" id="Addition"
-                                  placeholder="Дополнительная информация о себе"></textarea>
-                    </div>
-                </div>
-            </div> <!--курс, институт, доп-->
-
-            <div class="row" style="font-weight: bold;">
-                <div class="col-6">
-                    <div class="form-group">
-                        <label for="Email">Email</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
+                            <label for="Email">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                </div>
+                                <input type="text" class="form-control" id="Email" placeholder="Email"
+                                       aria-describedby="inputGroupPrepend2" required>
                             </div>
-                            <input type="text" class="form-control" id="Email" placeholder="Email"
-                                   aria-describedby="inputGroupPrepend2" required>
                         </div>
                     </div>
-                </div>
-                <div class="col-6">
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Пароль</label>
-                        <input name="password" type="password" required class="form-control"
-                               id="exampleInputPassword1"
-                               placeholder="Password">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Пароль</label>
+                            <input name="password" type="password" required class="form-control"
+                                   id="exampleInputPassword1"
+                                   placeholder="Password">
 
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="input-group">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="inputGroupFile04"
-                                   aria-describedby="inputGroupFileAddon04">
-                            <label class="custom-file-label" for="inputGroupFile04">Выбрать фото профиля</label>
-                        </div>
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-dark" type="button" id="inputGroupFileAddon04">Выбрать
-                            </button>
                         </div>
                     </div>
-                </div>
-            </div> <!--емаил, пароль, файл-->
+                    <div class="col">
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile04"
+                                       aria-describedby="inputGroupFileAddon04">
+                                <label class="custom-file-label" for="inputGroupFile04">Выбрать фото профиля</label>
+                            </div>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-dark" type="button" id="inputGroupFileAddon04">Выбрать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--емаил, пароль, файл-->
 
-            <button type="submit" class="btn btn-warning" style="margin-top: 20px; font-size: 20px">
-                Зарегестрироваться
-            </button>
-        </form>
+                <button type="submit" class="btn btn-warning" style="margin-top: 20px; font-size: 20px">
+                    Зарегестрироваться
+                </button>
+            </form>
+        </div>
     </div>
-</div>
-</form>
-</div>
 </div>
 
 <div>
