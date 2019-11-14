@@ -31,11 +31,12 @@
     justify-content: flex-end;
 }
 
-body, html{
+body{
     background-image: url("https://images.pexels.com/photos/1166644/pexels-photo-1166644.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     height: 100%;
     background-position: center;
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
 }
 
 .form {
@@ -65,5 +66,5 @@ body, html{
     box-shadow: 0 0 0 0.2rem rgba(253, 195, 48, 0.25);
 }
 .bg-footer {
-    background-color: #1c1c1c !important;
+    background-color: #000000 !important;
 }

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/sidebarStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Notes</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow fixed-top" style="z-index: 2;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand logo-font" href="#">UniProj</a>
+        </div>
+
+        <ul class="navbar-nav flex-row ml-md-auto">
+            <form class="form-inline row">
+                <li class="nav-item">
+                    <button class="btn btn-outline-warning mr-3" type="button">Создать проект</button>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link navbar-toggler-icon" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right my-dropdown" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Профиль</a>
+                        <a class="dropdown-item" href="#">Проекты</a>
+                        <a class="dropdown-item" href="#">Задания</a>
+                        <a class="dropdown-item" href="#">Чаты</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Выход</a>
+                    </div>
+                </li>
+            </form>
+        </ul>
+    </div>
+
+</nav> <!--navbar for user-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <div class="sidenav">
+                <a href="#nothing" style="height: 28px"></a>
+                <div class="dropdown-divider"></div>
+                <button class="btn btn-outline-warning" style="margin-left: 60px; margin-bottom: 5px" type="button">Добавить заметку
+                </button>
+                <a href="#note1">Заметка</a>
+                <a href="#note2">Заметка</a>
+                <a href="#note3">Заметка</a>
+            </div>
+        </div>
+        <div class="col-9" style="margin-top: 100px">
+            <!-- Grid column -->
+            <div class="align-self-center">
+                <!--Panel-->
+                <div class="card border border-warning">
+                    <h3 class="card-header light-blue lighten-1 white-text text-uppercase font-weight-bold text-center py-5">
+                        Заметка</h3>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Дело#1
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check1">
+                                    <label class="custom-control-label" for="check1"></label>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Дело#2
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check2">
+                                    <label class="custom-control-label" for="check2"></label>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="row" style="margin-top: 10px">
+                            <div class="col-10">
+                                <input type="noteAdd" class="form-control" id="inputNote" placeholder="Добавить...">
+                            </div>
+                            <div class="col-2">
+                                <button type="submit" class="btn btn-warning mb-2">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+                <!--/.Panel-->
+<!--                <button type="button" class="btn btn-dark btn-sm" > x </button>-->
+
+            </div>
+            <!-- Grid column -->
+        </div>
+    </div>
+
+</div>
+
+
+
+<div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script>
+        $('#btn-load').click(function () {
+            $('#btn-load').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Загрузка...').addClass('disabled');
+        });
+    </script>
+    <!--    <script>-->
+    <!--        function myFunction() {-->
+    <!--            // Declare variables-->
+    <!--            var input, filter, ul, li, a, i;-->
+    <!--            input = document.getElementById('myInput');-->
+    <!--            filter = input.value.toUpperCase();-->
+    <!--            ul = document.getElementById("myUL");-->
+    <!--            li = ul.getElementsByTagName('li');-->
+
+    <!--            // Loop through all list items, and hide those who don't match the search query-->
+    <!--            for (i = 0; i < li.length; i++) {-->
+    <!--                a = li[i].getElementsByTagName("a")[0];-->
+    <!--                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {-->
+    <!--                    li[i].style.display = "";-->
+    <!--                } else {-->
+    <!--                    li[i].style.display = "none";-->
+    <!--                }-->
+    <!--            }-->
+    <!--        }-->
+    <!--    </script>-->
+</div> <!--js-->
+</body>
+</html>

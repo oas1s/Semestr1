@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/sidebarStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>Profile</title>
+    <title>Title</title>
 </head>
 <body style="background: white;">
 <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow fixed-top" style="z-index: 2;">
@@ -41,43 +41,26 @@
 
 </nav> <!--navbar for user-->
 
-<div class="row">
-    <div class="col-5">
-        <div class="sidenav">
-            <a href="#nothing" style="height: 28px"></a>
-            <div class="dropdown-divider"></div>
-            <a href="#profile">Профиль</a>
-            <a href="#teachers">Преподаватели</a>
-            <a href="#coursemates">Однокурсники</a>
-            <a href="#profileSettings">Настройки профиля</a>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <div class="sidenav">
+                <a href="#nothing" style="height: 28px"></a>
+                <div class="dropdown-divider"></div>
+                <button class="btn btn-outline-warning" style="margin-left: 60px; margin-bottom: 5px" type="button">Новый диалог
+                </button>
+                <a href="#chat1">Название чата</a>
+                <a href="#chat2">Название чата</a>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="form-group border-warning fixed-bottom">
+                <textarea class="form-control" id="textArea" rows="3" placeholder="Написать..."></textarea>
+            </div>
         </div>
     </div>
-    <div class="col-auto">
-
-    </div>
-
 </div>
 
-<div class="row">
-    <div class="col-4">
-
-        <div id="mdb-lightbox-ui"></div>
-
-        <div class="mdb-lightbox">
-            <figure class="col-md-4">
-                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg" data-size="1600x1067">
-                    <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" alt="placeholder"
-                         class="img-fluid">
-                </a>
-            </figure>
-        </div>
-    </div>
-
-    <div class="col-xl-3 col-md-4 mb-3 text-right">
-        <img src="" class="img-fluid z-depth-1" alt="Responsive image">
-
-    </div>
-</div>
 <div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -89,10 +72,30 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
     <script>
-        $(function () {
-            $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+        $('#btn-load').click(function () {
+            $('#btn-load').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Загрузка...').addClass('disabled');
         });
     </script>
+    <!--    <script>-->
+    <!--        function myFunction() {-->
+    <!--            // Declare variables-->
+    <!--            var input, filter, ul, li, a, i;-->
+    <!--            input = document.getElementById('myInput');-->
+    <!--            filter = input.value.toUpperCase();-->
+    <!--            ul = document.getElementById("myUL");-->
+    <!--            li = ul.getElementsByTagName('li');-->
+
+    <!--            // Loop through all list items, and hide those who don't match the search query-->
+    <!--            for (i = 0; i < li.length; i++) {-->
+    <!--                a = li[i].getElementsByTagName("a")[0];-->
+    <!--                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {-->
+    <!--                    li[i].style.display = "";-->
+    <!--                } else {-->
+    <!--                    li[i].style.display = "none";-->
+    <!--                }-->
+    <!--            }-->
+    <!--        }-->
+    <!--    </script>-->
 </div> <!--js-->
 </body>
 </html>
