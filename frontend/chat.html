@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body style="background: white;">
-<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow fixed-top" style="z-index: 2;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow" style="z-index: 2;">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand logo-font" href="#">UniProj</a>
@@ -41,9 +41,9 @@
 
 </nav> <!--navbar for user-->
 
-<div class="container">
-    <div class="row" style="height: 100%">
-        <div class="col-3">
+<div class="container-fluid" style="height: 100%">
+    <div class="row no-gutters" style="height: 100%">
+        <div class="col-2">
             <div class="sidenav">
                 <a href="#nothing" style="height: 28px"></a>
                 <div class="dropdown-divider"></div>
@@ -54,7 +54,7 @@
                 <a href="#chat2">Название чата</a>
             </div>
         </div>
-        <div class="col-9">
+        <div class="col-10">
             <textarea class="form-control" id="textArea" rows="3" placeholder="Написать..."
                       style="position: absolute; bottom: 0px"></textarea>
         </div>
