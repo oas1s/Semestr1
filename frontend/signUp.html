@@ -29,8 +29,24 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-5 ml-auto" style="margin-top: 100px;">
+        <div class="col-5 ml-auto" style="margin-top: 60px;">
             <h3>Зарегистрируйтесь, чтобы начать эффективную работу над проектами!</h3>
+            <div class="form-group">
+                <div class="card-body__text-info" style="font-size: 16px">
+                    Ваш пароль должен удовлетворять следующим требованиям:
+                    <ul>
+                        <li id="passwordLengthError">
+                            Пароль должен содержать не менее 8 символов
+                        </li>
+                        <li id="passwordContainsUpperCaseLetterError">
+                            Пароль должен содержать хотя бы 1 заглавную букву
+                        </li>
+                        <li id="passwordContainsNumberError">
+                            Пароль должен содержать хотя бы 1 цифру
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="col-6 ml-auto" style="margin-top: 20px; margin-bottom: 20px; margin-right: 10px">
             <form class="form" action="/signUp" method="post">
@@ -94,18 +110,17 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <input type="text" class="form-control" id="Email" placeholder="Email"
-                                       aria-describedby="inputGroupPrepend2" required>
+                                <input name="email" type="email" required class="form-control" id="Email" aria-describedby="emailHelp"
+                                       placeholder="Email">
                             </div>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Пароль</label>
-                            <input name="password" type="password" required class="form-control"
-                                   id="exampleInputPassword1"
+                            <label for="inputPassword">Пароль</label>
+                            <input name="password" type="password" oninput="checkPassword()" required class="form-control"
+                                   id="inputPassword"
                                    placeholder="Password">
-
                         </div>
                     </div>
                     <div class="col">
@@ -132,6 +147,8 @@
 </div>
 
 <div>
+    <script src="assets/js/checkPassword.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
