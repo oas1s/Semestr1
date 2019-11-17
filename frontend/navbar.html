@@ -10,28 +10,28 @@
     <title>Navbar</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow" style="z-index: 2;">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand logo-font" href="#">UniProj</a>
+            <a class="navbar-brand logo-font" href="/mainPage">UniProj</a>
         </div>
 
         <ul class="navbar-nav flex-row ml-md-auto">
             <form class="form-inline row">
                 <li class="nav-item">
-                    <button class="btn btn-outline-warning mr-3" type="button">Создать проект</button>
+                    <button class="btn btn-outline-warning mr-3" type="button" onclick="document.location='/createProject'">Создать проект</button>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link navbar-toggler-icon" href="#" id="navbarDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     </a>
                     <div class="dropdown-menu dropdown-menu-right my-dropdown" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Профиль</a>
-                        <a class="dropdown-item" href="#">Проекты</a>
-                        <a class="dropdown-item" href="#">Задания</a>
-                        <a class="dropdown-item" href="#">Чаты</a>
+                        <a class="dropdown-item" href="/profile">Профиль</a>
+                        <a class="dropdown-item" href="/projects">Проекты</a>
+                        <a class="dropdown-item" href="/notes">Заметки</a>
+                        <a class="dropdown-item" href="/chats">Чаты</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Выход</a>
+                        <a class="dropdown-item" href="/logout">Выход</a>
                     </div>
                 </li>
             </form>
