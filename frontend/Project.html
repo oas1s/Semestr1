@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="assets/css/bootstrap.css">
+<head>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
     <link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -18,7 +19,9 @@
         <ul class="navbar-nav flex-row ml-md-auto">
             <form class="form-inline row">
                 <li class="nav-item">
-                    <button class="btn btn-outline-warning mr-3" type="button" onclick="document.location='/createProject'">Создать проект</button>
+                    <button class="btn btn-outline-warning mr-3" type="button"
+                            onclick="document.location='/createProject'">Создать проект
+                    </button>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link navbar-toggler-icon" href="#" id="navbarDropdown" role="button"
@@ -39,7 +42,104 @@
 
 </nav> <!--navbar for user-->
 
-
+<div class="container" style="margin-top: 15px; margin-bottom: 15px; width: 80%">
+    <form class="row form" style="background: rgba(0,0,0,0.73); font-weight: bold; color: #d7d7d7"
+          action="/createProject" method="get">
+        <div class="form-group">
+            <div class="row justify-content-between">
+                <div class="col-6">
+                    <h1 id="projectName" style="color: #fdc330">Название проекта</h1>
+                    <div class="form-group row" style="margin-top: 15px">
+                        <label for="student" class="col-4 col-form-label">Студент:</label>
+                        <div class="col-8">
+                            <input type="text" class="form-control" id="student" placeholder="ФИО" disabled>
+                        </div>
+                        <label for="teacher" class="col-4 col-form-label"
+                               style="margin-top: 15px">Преподаватель:</label>
+                        <div class="col-8" style="margin-top: 15px">
+                            <input type="text" class="form-control" id="teacher" placeholder="ФИО" disabled>
+                        </div>
+                        <label for="subject" class="col-2 col-form-label" style="margin-top: 15px">Предмет:</label>
+                        <div class="col-6" style="margin-top: 15px">
+                            <input type="text" class="form-control" id="subject" placeholder="Название предмета"
+                                   disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group row" style="margin: 0px">
+                        <legend class="col-form-label col-4 pt-0">Статус:</legend>
+                        <div class="col-8">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="status" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="status">Стадия</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row" style="margin: 0px">
+                        <label for="projectType">Тип проекта:</label>
+                        <select class="form-control form-control-sm" id="projectType" disabled>
+                            <option>Домашняя работа</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="container-fluid">
+                <textarea name="projectDescription" id="projectDescription" type="text" class="form-control"
+                          placeholder="Описание проекта" cols="130" disabled></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row container">
+                <label for="example-date-input" class="col-5 col-form-label">Крайний срок сдачи:</label>
+                <div class="col-7" style="margin-top: 10px">
+                    <input class="form-control" type="date" oninput="getDate()" id="example-date-input" disabled>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px">
+            <a href="path_to_file" download="proposed_file_name">Скачать прикрепленные файлы</a>
+        </div>
+        <div class="row">
+            <label for="links" class="col-3 col-form-label">Необходимые ссылки:</label>
+            <div class="col-9">
+                <textarea name="projectDescription" id="links" type="text" class="form-control"
+                          placeholder="Ссылки" cols="130" rows="1"></textarea>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container-fluid form" style="background-color: white; border-radius: 0px;">
+    <div class="container" style="margin-top: 15px">
+        <h4>Комментарии</h4>
+        <div class="form-group">
+            <form action="/project" method="post" class="d-flex d-flex">
+                <input type="text" name="text" class="form-control" placeholder="Напишите комментарий"
+                       style="margin-right: 10px;">
+                <input type="hidden" name="id" value="${video.id_video}">
+                <button type="submit" class="btn btn-warning" name="send" value="">Отправить
+                </button>
+            </form>
+        </div>
+        <div class="card" >
+            <div class="row" style="border: #fdc330">
+                <div class="col" style="margin: 15px">
+                    <span><h5>ФИО комментатора</h5></span>
+                    <small>
+                        дата отправки комментария
+                    </small>
+                    <div class="col comment-text">
+                        <span>содержание комментария</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
