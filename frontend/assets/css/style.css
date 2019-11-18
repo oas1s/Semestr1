@@ -80,3 +80,10 @@ body {
 html {
     height: 100%;
 }
+
+.list-group-item.active {
+    z-index: 2;
+    color: #000000;
+    background-color: #fdc330;
+    border-color: #fdc330;
+}

@@ -20,7 +20,9 @@
         <ul class="navbar-nav flex-row ml-md-auto">
             <form class="form-inline row">
                 <li class="nav-item">
-                    <button class="btn btn-outline-warning mr-3" type="button" onclick="document.location='/createProject'">Создать проект</button>
+                    <button class="btn btn-outline-warning mr-3" type="button"
+                            onclick="document.location='/createProject'">Создать проект
+                    </button>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link navbar-toggler-icon" href="#" id="navbarDropdown" role="button"
@@ -41,20 +43,120 @@
 
 </nav> <!--navbar for user-->
 
-<div class="container-fluid" style="height: 100%">
-    <div class="row no-gutters" style="height: 100%">
-        <div class="col-3">
-            <div class="sidenav">
-                <a href="#nothing" style="height: 28px"></a>
-                <div class="dropdown-divider"></div>
-                <a href="#profile">Профиль</a>
-                <a href="#teachers">Преподаватели</a>
-                <a href="#coursemates">Однокурсники</a>
-                <a href="#profileSettings">Настройки профиля</a>
+<div class="container-fluid">
+    <div class="row no-gutters">
+        <div class="col-3" style="margin-top: 15px">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-profile-list" data-toggle="list"
+                   href="#list-profile" role="tab" aria-controls="profile">Профиль</a>
+                <a class="list-group-item list-group-item-action" id="list-teachers-list" data-toggle="list"
+                   href="#list-teachers" role="tab" aria-controls="teachers">Преподаватели</a>
+                <a class="list-group-item list-group-item-action" id="list-students-list" data-toggle="list"
+                   href="#list-students" role="tab" aria-controls="students">Студенты</a>
+                <a class="list-group-item list-group-item-action" href="/profileSettings" role="tab"
+                   aria-controls="settings">Настройки профиля</a>
             </div>
         </div>
-        <div class="col-9">
+        <div class="col-8" style="margin-top: 15px; margin-left: 20px">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-profile" role="tabpanel"
+                     aria-labelledby="list-profile-list">
+                    <div class="row" style="margin-right: -90px;">
+                        <div class="col-3" style="margin-top: 20px;">
+                            <img src="assets/img/200.png" class="rounded float-left img-fluid" alt="profile img"
+                                 width="200px"
+                                 height="200px">
+                        </div>
+                        <div class="col-8" style="margin-top: 20px; margin-bottom: 20px; margin-right: 10px">
+                            <form class="form" action="/signUp" method="post">
+                                <div class="form-row">
+                                    <div class="row" style="font-weight: bold;">
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="Name">Имя</label>
+                                                <input type="text" class="form-control" id="Name" placeholder="Имя"
+                                                       required>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="Surname">Фамилия</label>
+                                                <input type="text" class="form-control" id="Surname"
+                                                       placeholder="Фамилия" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="Lastname">Отчество</label>
+                                                <input type="text" class="form-control" id="Lastname"
+                                                       placeholder="Отчество"
+                                                       required>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="University">Институт</label>
+                                                <input type="text" class="form-control" id="University"
+                                                       placeholder="Институт" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!--ФИО, институт-->
 
+                                <div class="row" style="font-weight: bold;">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="Addition">Дополнительные сведения</label>
+                                            <textarea style="height: 124px;" type="text" class="form-control"
+                                                      id="Addition"
+                                                      placeholder="Дополнительная информация о себе"></textarea>
+                                        </div>
+                                    </div>
+                                </div> <!--курс, институт, доп-->
+
+                                <div class="row" style="font-weight: bold;">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="Group">Группа</label>
+                                            <input type="text" class="form-control" id="Group" placeholder="Группа"
+                                                   required>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="Role">Должность</label>
+                                            <input name="role" type="role" required class="form-control"
+                                                   id="Role"
+                                                   placeholder="Роль">
+                                        </div>
+                                    </div>
+                                </div> <!--емаил, пароль, файл-->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-teachers" role="tabpanel" aria-labelledby="list-teachers-list">
+                    <h3 style="margin-bottom: 15px">Список преподавателей:</h3>
+                    <div class="list-group list-group-flush">
+                        <a href="/profile?id1" class="list-group-item list-group-item-action">Преподаватель№1</a>
+                        <a href="/profile?id2" class="list-group-item list-group-item-action">Преподаватель№2</a>
+                        <a href="/profile?id3" class="list-group-item list-group-item-action">Преподаватель№3</a>
+                        <a href="/profile?id4" class="list-group-item list-group-item-action">Преподаватель№4</a>
+                        <a href="/profile?id5" class="list-group-item list-group-item-action">Преподаватель№5</a>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-students" role="tabpanel" aria-labelledby="list-students-list">
+                    <h3 style="margin-bottom: 15px">Список студентов:</h3>
+                    <div class="list-group list-group-flush">
+                        <a href="/profile?idst1" class="list-group-item list-group-item-action">Студент№1</a>
+                        <a href="/profile?idst2" class="list-group-item list-group-item-action">Студент№2</a>
+                        <a href="/profile?idst3" class="list-group-item list-group-item-action">Студент№3</a>
+                        <a href="/profile?idst4" class="list-group-item list-group-item-action">Студент№4</a>
+                        <a href="/profile?idst5" class="list-group-item list-group-item-action">Студент№5</a>
+                    </div>
+                </div>
+                <!--                <b class="tab-pane fade" id="list-settings" role="button" aria-labelledby="list-settings-list">с</b>-->
+            </div>
         </div>
     </div>
 </div>
