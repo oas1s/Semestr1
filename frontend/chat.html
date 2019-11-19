@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
     <link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/sidebarStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Title</title>
@@ -20,7 +19,9 @@
         <ul class="navbar-nav flex-row ml-md-auto">
             <form class="form-inline row">
                 <li class="nav-item">
-                    <button class="btn btn-outline-warning mr-3" type="button" onclick="document.location='/createProject'">Создать проект</button>
+                    <button class="btn btn-outline-warning mr-3" type="button"
+                            onclick="document.location='/createProject'">Создать проект
+                    </button>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link navbar-toggler-icon" href="#" id="navbarDropdown" role="button"
@@ -43,23 +44,115 @@
 
 <div class="container-fluid" style="height: 100%">
     <div class="row no-gutters" style="height: 100%">
-        <div class="col-2">
-            <div class="sidenav">
-                <a href="#nothing" style="height: 28px"></a>
-                <div class="dropdown-divider"></div>
-                <button class="btn btn-outline-warning" style="margin-left: 60px; margin-bottom: 5px" type="button">
-                    Новый диалог
-                </button>
-                <a href="#chat1">Название чата</a>
-                <a href="#chat2">Название чата</a>
+        <div class="col-3" style="margin-top: 15px">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-dialog1-list" data-toggle="list"
+                   href="#list-dialog1" role="tab" aria-controls="dialog1">Диалог№1</a>
+                <a class="list-group-item list-group-item-action" id="list-dialog2-list" data-toggle="list"
+                   href="#list-dialog2" role="tab" aria-controls="dialog2">Диалог№2</a>
             </div>
         </div>
-        <div class="col-10">
-            <textarea class="form-control" id="textArea" rows="3" placeholder="Написать..."
-                      style="position: absolute; bottom: 0px"></textarea>
+        <div class="col-8" style=" margin-left: 20px">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-dialog1" role="tabpanel" aria-labelledby="list-dialog1-list">
+                    <div class="container">
+                        <div class="scrollbar scrollbar-warning">
+                            <div class="force-overflow"></div>
+                        </div>
+                        <div class="card" name="messageCard">
+                            <div class="row">
+                                <div class="col" style="margin: 15px">
+                                    <span>ФИО</span>
+                                    <div class="col">
+                                        <span><h6>содержание сообщения</h6></span>
+                                    </div>
+                                    <small>дата</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" name="messageCard">
+                            <div class="row">
+                                <div class="col" style="margin: 15px">
+                                    <span>ФИО</span>
+                                    <div class="col">
+                                        <span><h6>содержание сообщения</h6></span>
+                                    </div>
+                                    <small>дата</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" name="messageCard">
+                            <div class="row">
+                                <div class="col" style="margin: 15px">
+                                    <span>ФИО</span>
+                                    <div class="col">
+                                        <span><h6>содержание сообщения</h6></span>
+                                    </div>
+                                    <small>дата</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" name="messageCard">
+                            <div class="row">
+                                <div class="col" style="margin: 15px">
+                                    <span>ФИО</span>
+                                    <div class="col">
+                                        <span><h6>содержание сообщения</h6></span>
+                                    </div>
+                                    <small>дата</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" name="messageCard">
+                            <div class="row">
+                                <div class="col" style="margin: 15px">
+                                    <span>ФИО</span>
+                                    <div class="col">
+                                        <span><h6>содержание сообщения</h6></span>
+                                    </div>
+                                    <small>дата</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" name="messageCard">
+                            <div class="row">
+                                <div class="col" style="margin: 15px">
+                                    <span>ФИО</span>
+                                    <div class="col">
+                                        <span><h6>содержание сообщения</h6></span>
+                                    </div>
+                                    <small>дата</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" name="messageCard">
+                            <div class="row">
+                                <div class="col" style="margin: 15px">
+                                    <span>ФИО</span>
+                                    <div class="col">
+                                        <span><h6>содержание сообщения</h6></span>
+                                    </div>
+                                    <small>дата</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <form action="" method="post" class="d-flex d-flex">
+                            <textarea class="form-control" id="textArea" rows="3" placeholder="Написать..." style="position: absolute; bottom: 50px"></textarea>
+                            <button type="submit" class="btn btn-warning" name="send" value="" style="position: absolute; bottom: 7px">Отправить
+                            </button    >
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-dialog2" role="tabpanel" aria-labelledby="list-dialog2-list">
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
 
 <div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
