@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>mainPageForTeachers</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow" style="z-index: 2;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand logo-font" href="/mainPage">UniProj</a>
+        </div>
+
+        <ul class="navbar-nav flex-row ml-md-auto">
+            <form class="form-inline row">
+<!--                <li class="nav-item">-->
+<!--                    <button class="btn btn-outline-warning mr-3" type="button" onclick="document.location='/createProject'">Создать проект</button>-->
+<!--                </li>-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link navbar-toggler-icon" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right my-dropdown" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/profile">Профиль</a>
+                        <a class="dropdown-item" href="/projects">Проекты</a>
+                        <a class="dropdown-item" href="/notes">Заметки</a>
+                        <a class="dropdown-item" href="/chats">Чаты</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/logout">Выход</a>
+                    </div>
+                </li>
+            </form>
+        </ul>
+    </div>
+
+</nav> <!--navbar for user-->
+
+<div class="container" style="margin-top: 15px">
+    <div class="row no-gutters justify-content-center">
+        <h5>Доступные проекты:</h5>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row no-gutters justify-content-center" style="margin: 10px">
+        <div class="col-7">
+            <input class="form-control" type="text" onkeyup="myFunction()" placeholder="Поиск" aria-label="Поиск">
+        </div>
+        <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" style=" margin-left: 2px"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item">Сортировать:</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">По дате</a>
+            <a class="dropdown-item" href="#">По названию</a>
+        </div>
+        <button class="btn btn-warning btn-rounded" style="color: #1f1f1f; margin-left: 2px" type="submit">
+            Найти
+        </button>
+    </div>
+</div> <!--поиск-->
+<div class="block">
+    <div class="container-fluid" style="margin-top: 10px">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Название проекта</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="row justify-content-between">
+                            <div class="col-7">
+                                <p class="card-text">
+                                    <small class="text-muted" style="">ФИО студента</small>
+                                </p>
+                            </div>
+                            <div class="col-auto">
+                                <a href="/project?id-of-project" class="btn btn-outline-warning" style="margin: 0px">Перейти на страницу
+                                    проекта</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="margin-top: 10px">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Название проекта</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="row justify-content-between">
+                            <div class="col-7">
+                                <p class="card-text">
+                                    <small class="text-muted" style="">ФИО студента</small>
+                                </p>
+                            </div>
+                            <div class="col-auto">
+                                <a href="/project?id-of-project" class="btn btn-outline-warning" style="margin: 0px">Перейти на страницу
+                                    проекта</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="margin-top: 10px">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Название проекта</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="row justify-content-between">
+                            <div class="col-7">
+                                <p class="card-text">
+                                    <small class="text-muted" style="">ФИО студента</small>
+                                </p>
+                            </div>
+                            <div class="col-auto">
+                                <a href="/project?id-of-project" class="btn btn-outline-warning" style="margin: 0px">Перейти на страницу
+                                    проекта</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="margin-top: 10px; margin-bottom: 15px">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Название проекта</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="row justify-content-between">
+                            <div class="col-7">
+                                <p class="card-text">
+                                    <small class="text-muted" style="">ФИО студента</small>
+                                </p>
+                            </div>
+                            <div class="col-auto">
+                                <a href="/project?id-of-project" class="btn btn-outline-warning" style="margin: 0px">Перейти на страницу
+                                    проекта</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!--Cards-->
+<div class="d-flex justify-content-center" style="margin-bottom: 15px">
+    <button type="button" id="btn-load" class="btn btn-warning">Загрузить еще</button>
+</div>
+
+<footer class="page-footer font-small bg-footer pt-4">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 bg-black" style="color: white">© 2019 Copyright:
+        <a href="https://mdbootstrap.com/education/bootstrap/"> 11-806</a>
+    </div>
+    <!-- Copyright -->
+</footer> <!-- Footer -->
+<div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script>
+        $('#btn-load').click(function () {
+            $('#btn-load').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Загрузка...').addClass('disabled');
+        });
+    </script>
+    <!--    <script>-->
+    <!--        function myFunction() {-->
+    <!--            // Declare variables-->
+    <!--            var input, filter, ul, li, a, i;-->
+    <!--            input = document.getElementById('myInput');-->
+    <!--            filter = input.value.toUpperCase();-->
+    <!--            ul = document.getElementById("myUL");-->
+    <!--            li = ul.getElementsByTagName('li');-->
+
+    <!--            // Loop through all list items, and hide those who don't match the search query-->
+    <!--            for (i = 0; i < li.length; i++) {-->
+    <!--                a = li[i].getElementsByTagName("a")[0];-->
+    <!--                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {-->
+    <!--                    li[i].style.display = "";-->
+    <!--                } else {-->
+    <!--                    li[i].style.display = "none";-->
+    <!--                }-->
+    <!--            }-->
+    <!--        }-->
+    <!--    </script>-->
+</div> <!--js-->
+</body>
+</html>

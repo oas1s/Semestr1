@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand logo-font" href="/mainPage">UniProj</a>
+        </div>
+
+        <ul class="navbar-nav flex-row ml-md-auto">
+            <form class="form-inline row">
+                <li class="nav-item">
+                    <button class="btn btn-outline-warning mr-3" type="button" onclick="document.location='/signIn'">Войти</button>
+                </li>
+            </form>
+        </ul>
+    </div>
+
+</nav> <!--navbar-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-5 ml-auto" style="margin-top: 60px;">
+            <h3>Зарегистрируйтесь, чтобы начать эффективную работу над проектами!</h3>
+            <div class="form-group">
+                <div class="card-body__text-info" style="font-size: 16px">
+                    Ваш пароль должен удовлетворять следующим требованиям:
+                    <ul>
+                        <li id="passwordLengthError">
+                            Пароль должен содержать не менее 8 символов
+                        </li>
+                        <li id="passwordContainsUpperCaseLetterError">
+                            Пароль должен содержать хотя бы 1 заглавную букву
+                        </li>
+                        <li id="passwordContainsNumberError">
+                            Пароль должен содержать хотя бы 1 цифру
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 ml-auto" style="margin-top: 20px; margin-bottom: 20px; margin-right: 10px">
+            <form class="form" action="/signUp" method="post">
+                <div class="form-row">
+                    <div class="row" style="font-weight: bold;">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="Name">Имя</label>
+                                <input type="text" class="form-control" id="Name" name="Name" placeholder="Имя" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="Surname">Фамилия</label>
+                                <input type="text" class="form-control" id="Surname" name="Surname" placeholder="Фамилия" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="Lastname">Отчество</label>
+                                <input type="text" class="form-control" id="Lastname" name="Lastname" placeholder="Отчество" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="University">Институт</label>
+                                <input type="text" class="form-control" id="University" name="University" placeholder="Институт" required>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--ФИО, институт-->
+
+                <div class="row" style="font-weight: bold;">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="Role">Должность</label>
+                            <select class="form-control" name="Role" id="Role">
+                                <option>Student</option>
+                                <option>Teacher</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Group">Группа</label>
+                            <input type="text" class="form-control" id="Group" name="Group" placeholder="Группа" required>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label for="Addition">Дополнительные сведения</label>
+                            <textarea style="height: 124px;" type="text" class="form-control" id="Addition"
+                                      placeholder="Дополнительная информация о себе"></textarea>
+                        </div>
+                    </div>
+                </div> <!--курс, институт, доп-->
+
+                <div class="row" style="font-weight: bold;">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                </div>
+                                <input name="email" type="email" required class="form-control" id="Email" aria-describedby="emailHelp"
+                                       placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="inputPassword">Пароль</label>
+                            <input name="password" type="password" oninput="checkPassword()" required class="form-control"
+                                   id="inputPassword"
+                                   placeholder="Password">
+                        </div>
+                    </div>
+                </div> <!--емаил, пароль, файл-->
+
+                <button type="submit" class="btn btn-warning" style="margin-top: 20px; font-size: 20px">
+                    Зарегистрироваться
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div>
+    <script src="assets/js/checkPassword.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</div> <!--js-->
+</body>
+</html>
